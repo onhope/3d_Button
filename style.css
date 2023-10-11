@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border;
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  /* 화면의 중앙 정렬 */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% -50%);
+  /* flip-btn을 원근감있게 보기 위하여 상위 요소에 원근감 설정 */
+  perspective: 1000px;
+}
+
+.flip-btn {
+  width: 200px;
+  height: 100px;
+  color: white;
+  text-align: center;
+  /* 한줄일때 문자를 수직 중앙 정렬하는 방법, 요소의 height와 동일하게 line-height를 준다 */
+  line-height: 100px;
+  /* 2d -> 3d로 만들기 */
+  transform-style: preserve-3d;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.flip-btn:hover {
+  transform: rotateX(-90deg);
+}
+
+.front {
+  height: 100px;
+  background-color: goldenrod;
+  transform: translateZ(50px);
+}
+
+.back {
+  height: 100px;
+  background-color: darkgoldenrod;
+  transform: rotateX(90deg) translateZ(150px);
+}
