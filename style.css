@@ -13,7 +13,7 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50% -50%);
+  transform: translate(-50%, -50%);
   /* flip-btn을 원근감있게 보기 위하여 상위 요소에 원근감 설정 */
   perspective: 1000px;
 }
